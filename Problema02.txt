@@ -1,0 +1,49 @@
+INICIO
+funcion principal
+     // declara variablas
+nota1, d(0-n)
+nota2, d(0-n)
+nota3, d(0-n)
+nota4, d(0-n)
+promCualitativo, x(30)[{a-z}, {A-Z}, {BS}]
+
+<<Ingrese la la nota"
+>>nota1
+<<Ingrese la la nota"
+>>nota2
+<<Ingrese la la nota"
+>>nota3
+<<Ingrese la la nota"
+>>nota4
+
+promCualitativo <-- funcion primeraF(nota1, nota2, nota3, nota4)
+
+<<"El promedio de las notas: " + nota1+ ", " + nota2 + ", " + nota3 +", " + nota3 + " es " + promCualitativo
+
+fin funcion principal
+
+funcion primeraF(a, d; b, d; c, d; d, d): x
+     prom_cualitativo, x(30)[{a-z}, {A-Z}, {BS}] 
+     
+     promedio = (a +b + c + d) / 4
+            
+     Si  (promedio <= 0) AND (promedio >= 5) entonces
+               prom_cualitativo = "Regular"
+     Si no    
+               Si (promedio <= 5.1) AND (promedio >= 8) entonces      
+                         prom_cualitativo = "Bueno"  
+               Si no                              
+                         Si (promedio <= 8.1) AND (promedio >= 9) entonces      
+                                   prom_cualitativo = "Muy Bueno"      
+                         Si no            
+                                   Si (promedio <= 9.1) AND (promedio >= 10) entonces      
+                                             prom_cualitativo = "Sobresaliente" 
+                                   FinSi
+                         FinSi                         
+               FinSi                                
+     FinSi                                  
+     retornar prom_cualitativo                                            
+                          
+fin funcion primeraF
+
+FIN
